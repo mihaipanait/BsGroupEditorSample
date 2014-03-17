@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdminMenu" xml:space="preserve">
+    <value>Admin Area Menu</value>
+  </data>
   <data name="Any" xml:space="preserve">
     <value>Any</value>
   </data>
@@ -130,12 +133,39 @@
     <value>Category</value>
   </data>
   <data name="CustomLink" xml:space="preserve">
-    <value>Custom Link</value>
+    <value>Custom link</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Display name</value>
+  </data>
+  <data name="FooterMenu" xml:space="preserve">
+    <value>Footer Menu</value>
   </data>
   <data name="FrontEnd" xml:space="preserve">
     <value>Front-end</value>
   </data>
+  <data name="Icon" xml:space="preserve">
+    <value>Icon</value>
+  </data>
+  <data name="Link" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="MainMenu" xml:space="preserve">
+    <value>Main Menu</value>
+  </data>
   <data name="Page" xml:space="preserve">
     <value>Page</value>
+  </data>
+  <data name="PromptIcon" xml:space="preserve">
+    <value>Choose Glyphicon</value>
+  </data>
+  <data name="PromptLink" xml:space="preserve">
+    <value>Relative path</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Required field</value>
+  </data>
+  <data name="Visibility" xml:space="preserve">
+    <value>Visibility</value>
   </data>
 </root>

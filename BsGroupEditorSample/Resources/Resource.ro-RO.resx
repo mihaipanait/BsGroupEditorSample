@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AdminMenu" xml:space="preserve">
+    <value>Meniu Secțiune Administrare</value>
+  </data>
   <data name="Any" xml:space="preserve">
     <value>Oricare</value>
   </data>
@@ -130,12 +133,39 @@
     <value>Categorie</value>
   </data>
   <data name="CustomLink" xml:space="preserve">
-    <value>Link Personalizat</value>
+    <value>Link personalizat</value>
+  </data>
+  <data name="DisplayName" xml:space="preserve">
+    <value>Denumire</value>
+  </data>
+  <data name="FooterMenu" xml:space="preserve">
+    <value>Meniu Secundar</value>
   </data>
   <data name="FrontEnd" xml:space="preserve">
     <value>Public</value>
   </data>
+  <data name="Icon" xml:space="preserve">
+    <value>Pictogramă</value>
+  </data>
+  <data name="Link" xml:space="preserve">
+    <value>Link</value>
+  </data>
+  <data name="MainMenu" xml:space="preserve">
+    <value>Meniu Principal</value>
+  </data>
   <data name="Page" xml:space="preserve">
     <value>Pagină</value>
+  </data>
+  <data name="PromptIcon" xml:space="preserve">
+    <value>Alege Glyphicon</value>
+  </data>
+  <data name="PromptLink" xml:space="preserve">
+    <value>Inserați calea relativă</value>
+  </data>
+  <data name="RequiredField" xml:space="preserve">
+    <value>Câmp obligatoriu</value>
+  </data>
+  <data name="Visibility" xml:space="preserve">
+    <value>Vizibilitate</value>
   </data>
 </root>

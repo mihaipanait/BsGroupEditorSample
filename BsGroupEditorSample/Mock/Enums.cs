@@ -7,6 +7,16 @@ using BsGroupEditorSample.Resources;
 
 namespace BsGroupEditorSample.Mock
 {
+    public enum MenuTypes
+    {
+        [Display(Name = "MainMenu", ResourceType = typeof(Resource))]
+        MainMenu = 1,
+        [Display(Name = "FooterMenu", ResourceType = typeof(Resource))]
+        FooterMenu = 2,
+        [Display(Name = "AdminMenu", ResourceType = typeof(Resource))]
+        AdminMenu = 3
+    }
+
     public enum MenuItemTypes
     {
         [Display(Name = "Page", ResourceType = typeof(Resource))]
