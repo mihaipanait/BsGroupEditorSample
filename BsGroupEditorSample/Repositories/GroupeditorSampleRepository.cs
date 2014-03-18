@@ -8,17 +8,23 @@ using BsGroupEditorSample.Models;
 
 namespace BsGroupEditorSample.Repositories
 {
+    public class GroupEditorSettings : BsGridRepositorySettings<MenuItemSearchModel>
+    {
+        public MenuItemTypes TabId { get; set; }
+    }
+
     public class GroupEditorSampleRepository : BsBaseGridRepository<MenuItem, SampleGroupRowModel>
     {
+
         #region Properties and Constructor
 
         private BFormsContext db;
 
-        public BsGridRepositorySettings<MenuItemSearchModel> Settings
+        public GroupEditorSettings Settings
         {
             get
             {
-                return settings as BsGridRepositorySettings<MenuItemSearchModel>;
+                return settings as GroupEditorSettings;
             }
         }
 
@@ -34,7 +40,9 @@ namespace BsGroupEditorSample.Repositories
             new SampleGroupRowModel
             {
                 Id = x.Id,
-                DisplayName = x.DisplayName
+                DisplayNameLocal = x.DisplayNameLocal,
+                DisplayNameInternational = x.DisplayNameInternational,
+                Permissions = x.Visibility.ToString()
             };
         #endregion
 
@@ -60,6 +68,12 @@ namespace BsGroupEditorSample.Repositories
         {
 
             var settings = this.Settings;
+
+            if (settings != null)
+            {
+                if(settings.TabId != null)
+                    query = query.Where(x => x.MenuItemType == settings.TabId);
+            }
             //implement filter logic
 
             return query;

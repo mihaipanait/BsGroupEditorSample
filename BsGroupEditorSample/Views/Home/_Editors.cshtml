@@ -1,10 +1,5 @@
 ﻿@model BsGroupEditorSample.Models.GroupEditorViewModel
 @using BForms.Html
-@using BsGroupEditorSample.Resources
-@using BForms.Models
-@using BForms.Grid
-@using BsGroupEditorSample.Controllers
-@using BForms.Editor
 @using BsGroupEditorSample.Mock
 
 @{
@@ -12,27 +7,27 @@
 
     builder.ConfigureTabs(cfg =>
     {
-        var tab3 = cfg.For(x => x.Tab3)
+        var tab1 = cfg.For(x => x.Tab1)
+            //.Editable()
             .Template(x => x.Grid, "_TabItem")
             //.Template(x => x.Search, "~/Areas/Demo/Views/Contributors/Toolbar/_Search.cshtml")
             //.Template(x => x.New, "~/Areas/Demo/Views/Contributors/Toolbar/_New.cshtml")
-            .ConnectsWith();
+            .ConnectsWith(MenuTypes.MainMenu, MenuTypes.AdminMenu, MenuTypes.FooterMenu);
 
         var tab2 = cfg.For(x => x.Tab2)
             .Template(x => x.Grid, "_TabItem")
             //.Template(x => x.Search, "~/Areas/Demo/Views/Contributors/Toolbar/_Search.cshtml")
             //.Template(x => x.New, "~/Areas/Demo/Views/Contributors/Toolbar/_New.cshtml")
-            .ConnectsWith();
-        
+            .ConnectsWith(MenuTypes.MainMenu, MenuTypes.FooterMenu);
 
-        var tab1 = cfg.For(x => x.Tab1)
-            .Editable()
+        var tab3 = cfg.For(x => x.Tab3)
             .Template(x => x.Grid, "_TabItem")
             //.Template(x => x.Search, "~/Areas/Demo/Views/Contributors/Toolbar/_Search.cshtml")
             //.Template(x => x.New, "~/Areas/Demo/Views/Contributors/Toolbar/_New.cshtml")
-            .ConnectsWith();
+            .ConnectsWith(MenuTypes.MainMenu, MenuTypes.FooterMenu);
 
-        tab1.BulkMove = true;
+
+        tab1.BulkMove = false;
 
         cfg.Title = "Menu Items";
 
@@ -41,17 +36,17 @@
         {
             cfg.For(x => x.Group1)
                 .DisplayText("Adauga la Main Menu")
-                .DisplayName("Main Menu")
+                .DisplayName("Main Menu (FrontEnd)")
                 .Template(x => x.Items, "_GroupItem");
 
             cfg.For(x => x.Group2)
                 .DisplayText("Adauga la Footer Menu")
-                .DisplayName("Footer Menu")
+                .DisplayName("Footer Menu (FrontEnd)")
                 .Template(x => x.Items, "_GroupItem");
 
             cfg.For(x => x.Group3)
                 .DisplayText("Adauga la Admin Menu")
-                .DisplayName("Admin Menu")
+                .DisplayName("Admin Menu (BackEnd)")
                 .Template(x => x.Items, "_GroupItem");
 
             cfg.Title = "Menus";
@@ -69,6 +64,6 @@
 
 <script id="js-groupItem" type="text/x-icanhaz">
 
-    <span>{{DisplayName}}</span>
+    <span>{{DisplayNameInternational}}</span>
 
 </script>

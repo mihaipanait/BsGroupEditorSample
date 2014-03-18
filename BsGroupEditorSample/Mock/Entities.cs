@@ -18,7 +18,8 @@ namespace BsGroupEditorSample.Mock
                         new MenuItem()
                         {
                             Id = 1,
-                            DisplayName = "Home",
+                            DisplayNameLocal = "Home",
+                            DisplayNameInternational = "Home",
                             MenuItemType = MenuItemTypes.Page,
                             Link = "/Home.html",
                             Icon = Glyphicon.Home,
@@ -27,7 +28,8 @@ namespace BsGroupEditorSample.Mock
                         new MenuItem()
                         {
                             Id = 2,
-                            DisplayName = "About",
+                            DisplayNameLocal = "About",
+                            DisplayNameInternational = "About",
                             MenuItemType = MenuItemTypes.Page,
                             Link = "/About.html",
                             Icon = Glyphicon.QuestionSign,
@@ -36,7 +38,8 @@ namespace BsGroupEditorSample.Mock
                         new MenuItem()
                         {
                             Id = 3,
-                            DisplayName = "Administration",
+                            DisplayNameLocal = "Administration",
+                            DisplayNameInternational = "Administration",
                             MenuItemType = MenuItemTypes.Page,
                             Link = "/AdminHome.html",
                             Icon = Glyphicon.Cog,
@@ -45,7 +48,8 @@ namespace BsGroupEditorSample.Mock
                         new MenuItem()
                         {
                             Id = 4,
-                            DisplayName = "Site Statistics",
+                            DisplayNameLocal = "Site Statistics",
+                            DisplayNameInternational = "Site Statistics",
                             MenuItemType = MenuItemTypes.Page,
                             Link = "/Statistics.html",
                             Icon = Glyphicon.Stats,
@@ -54,7 +58,8 @@ namespace BsGroupEditorSample.Mock
                         new MenuItem()
                         {
                             Id = 5,
-                            DisplayName = "Users Management",
+                            DisplayNameLocal = "Users Management",
+                            DisplayNameInternational = "Users Management",
                             MenuItemType = MenuItemTypes.Page,
                             Link = "/ManageUsers.html",
                             Icon = Glyphicon.User,
@@ -63,7 +68,8 @@ namespace BsGroupEditorSample.Mock
                         new MenuItem()
                         {
                             Id = 6,
-                            DisplayName = "News",
+                            DisplayNameLocal = "News",
+                            DisplayNameInternational = "News",
                             MenuItemType = MenuItemTypes.Category,
                             Link = "/Blog?type=news",
                             Icon = Glyphicon.List,
@@ -72,7 +78,8 @@ namespace BsGroupEditorSample.Mock
                         new MenuItem()
                         {
                             Id = 7,
-                            DisplayName = "Products",
+                            DisplayNameLocal = "Products",
+                            DisplayNameInternational = "Products",
                             MenuItemType = MenuItemTypes.Category,
                             Link = "/Blog?type=product",
                             Icon = Glyphicon.Euro,
@@ -81,7 +88,8 @@ namespace BsGroupEditorSample.Mock
                         new MenuItem()
                         {
                             Id = 8,
-                            DisplayName = "Reviews",
+                            DisplayNameLocal = "Reviews",
+                            DisplayNameInternational = "Reviews",
                             MenuItemType = MenuItemTypes.Category,
                             Link = "/Blog?type=review",
                             Icon = Glyphicon.User,
@@ -90,7 +98,8 @@ namespace BsGroupEditorSample.Mock
                         new MenuItem()
                         {
                             Id = 9,
-                            DisplayName = "Google Search",
+                            DisplayNameLocal = "Google Search",
+                            DisplayNameInternational = "Google Search",
                             MenuItemType = MenuItemTypes.CustomLink,
                             Link = "www.google.com?search=bforms",
                             Icon = Glyphicon.Globe,
@@ -99,7 +108,8 @@ namespace BsGroupEditorSample.Mock
                         new MenuItem()
                         {
                             Id = 10,
-                            DisplayName = "Bing Search",
+                            DisplayNameLocal = "Bing Search",
+                            DisplayNameInternational = "Bing Search",
                             MenuItemType = MenuItemTypes.CustomLink,
                             Link = "www.bing.com?search=bforms",
                             Icon = Glyphicon.Globe,
@@ -136,7 +146,8 @@ namespace BsGroupEditorSample.Mock
     public class MenuItem
     {
         public int Id { get; set; }
-        public string DisplayName { get; set; }
+        public string DisplayNameLocal { get; set; }
+        public string DisplayNameInternational { get; set; }
         public MenuItemTypes MenuItemType { get; set; }
         public string Link { get; set; }
         public Glyphicon? Icon { get; set; }

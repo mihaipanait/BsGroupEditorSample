@@ -24,15 +24,18 @@ namespace BsGroupEditorSample.Controllers
 
         public ActionResult Index()
         {
+            var bsGridSettings = new GroupEditorSettings
+            {
+                Page = 1,
+                PageSize = 5,
+                TabId = MenuItemTypes.Page
+            };
+
             var model = new GroupEditorModel()
             {
                 Tab1 = new BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, PageNewModel>
                 {
-                    Grid = repo.ToBsGridViewModel(new BsGridRepositorySettings<SampleGroupRowModel>
-                    {
-                        Page = 1,
-                        PageSize = 5
-                    }),
+                    Grid = repo.ToBsGridViewModel(bsGridSettings),
                     Search = repo.GetSearchForm(),
                     New = repo.GetNewForm() as PageNewModel
                 },
@@ -71,7 +74,7 @@ namespace BsGroupEditorSample.Controllers
             return View(viewModel);
         }
 
-        public BsJsonResult GetTab(BsEditorRepositorySettings<MenuItemTypes> settings)
+        public BsJsonResult GetTab(GroupEditorSettings settings)
         {
             var msg = string.Empty;
             var status = BsResponseStatus.Success;
@@ -111,18 +114,20 @@ namespace BsGroupEditorSample.Controllers
         }
 
          [NonAction]
-        public string RenderTab(BsEditorRepositorySettings<MenuItemTypes> settings, out int count)
+        public string RenderTab(GroupEditorSettings settings, out int count)
         {
             var html = string.Empty;
             count = 0;
 
             var model = new GroupEditorModel();
+            //settings.TabId = settings.TabId;
 
             switch (settings.TabId)
             {
                 case MenuItemTypes.Page:
 
-                    var grid1 = repo.ToBsGridViewModel(settings.ToBaseGridRepositorySettings(), out count);
+                    var grid1 = repo.ToBsGridViewModel(settings, out count);
+
                     model.Tab1 = new BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, PageNewModel>
                     {
                         Grid = grid1,
@@ -133,7 +138,7 @@ namespace BsGroupEditorSample.Controllers
 
                 case MenuItemTypes.CustomLink:
 
-                    var grid2 = repo.ToBsGridViewModel(settings.ToGridRepositorySettings<MenuItemSearchModel>(), out count);
+                    var grid2 = repo.ToBsGridViewModel(settings, out count);
 
                     model.Tab2 = new BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, CustomLinkNewModel>
                     {
@@ -145,7 +150,7 @@ namespace BsGroupEditorSample.Controllers
 
                 case MenuItemTypes.Category:
 
-                    var grid3 = repo.ToBsGridViewModel(settings.ToGridRepositorySettings<MenuItemSearchModel>(), out count);
+                    var grid3 = repo.ToBsGridViewModel(settings, out count);
 
                     model.Tab3 = new BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, CategoryNewModel>
                     {

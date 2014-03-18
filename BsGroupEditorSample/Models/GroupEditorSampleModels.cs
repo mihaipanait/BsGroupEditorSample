@@ -13,7 +13,9 @@ namespace BsGroupEditorSample.Models
     public class SampleGroupRowModel : BsEditorGroupItemModel<SampleRowFormModel>
     {
         public int Id { get; set; }
-        public string DisplayName { get; set; }
+        public string DisplayNameLocal { get; set; }
+        public string DisplayNameInternational { get; set; }
+        public string Permissions { get; set; }
 
         public override object GetUniqueID()
         {

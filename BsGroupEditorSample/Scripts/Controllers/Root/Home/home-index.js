@@ -17,14 +17,15 @@
         $('#myGroupEditor').bsGroupEditor({
             getTabUrl: this.options.getTabUrl,
             buildDragHelper: function (model, tabId, connectsWith) {
-                return $('<div class="col-lg-6 col-md-6 bs-itemContent" style="z-index:999"><span>' + model.DisplayName + '</span></div>');
+                return $('<div class="col-lg-6 col-md-6 bs-itemContent" style="z-index:999"><span>' + model.DisplayNameInternational + '</span></div>');
             },
             buildGroupItem: $.proxy(function (model, group, tabId, objId) {
-                var view = this.renderer['js-groupItem'](model);
-                return view;
+                return $('<span>' + model.DisplayNameInternational + '</span>');
             }, this),
             validateMove: function (model, tabId, $group) {
-                //if (model.Role == 1 && $group.data('groupid') == 4) return false;
+                if (model.Permissions == "BackEnd" && $group.data('groupid') == 1) return false;
+                else if (model.Permissions == "BackEnd" && $group.data('groupid') == 2) return false;
+                else if (model.Permissions == "FrontEnd" && $group.data('groupid') == 3) return false;
             },
             onSaveSuccess: $.proxy(function () {
             }, this),
@@ -47,7 +48,6 @@
         });
     };
     //#endregion
-
 
 
     //#region Dom Ready
