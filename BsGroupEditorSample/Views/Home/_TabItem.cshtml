@@ -1,8 +1,17 @@
-﻿@model BsGroupEditorSample.Models.SampleGroupRowModel
+﻿@using BForms.Html
+@using BForms.Models
+@model BsGroupEditorSample.Models.SampleGroupRowModel
+
 
 <dl class="to-left">
     <dt>Name:</dt>
-    <dd>@Model.DisplayNameInternational</dd>
+    <dd>@if (Model.Icon.HasValue)
+        {
+            @Html.BsGlyphicon(Model.Icon.Value);
+        } @Model.DisplayNameInternational</dd>
+    
+    <dt>Link:</dt>
+    <dd>@Model.Link</dd>
 
     <dt>Permissions:</dt>
     <dd>@Model.Permissions</dd>

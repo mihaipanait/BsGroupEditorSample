@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using BForms.Grid;
+using BForms.Models;
 using BsGroupEditorSample.Mock;
 using BsGroupEditorSample.Models;
 
@@ -42,7 +43,9 @@ namespace BsGroupEditorSample.Repositories
                 Id = x.Id,
                 DisplayNameLocal = x.DisplayNameLocal,
                 DisplayNameInternational = x.DisplayNameInternational,
-                Permissions = x.Visibility.ToString()
+                Link = x.Link,
+                Permissions = x.Visibility.ToString(),
+                Icon = x.Icon
             };
         #endregion
 
@@ -73,8 +76,19 @@ namespace BsGroupEditorSample.Repositories
             {
                 if(settings.TabId != null)
                     query = query.Where(x => x.MenuItemType == settings.TabId);
+
+                if (!string.IsNullOrEmpty(Settings.QuickSearch))
+                {
+                    var searched = settings.QuickSearch.ToLower();
+
+                    query = query.Where(x => x.DisplayNameLocal.ToLower().Contains(searched) ||
+                                                        x.DisplayNameInternational.ToLower().Contains(searched) ||
+                                                        x.Link.ToLower().Contains(searched));
+                }
+                else if (settings.Search != null)
+                {
+                }
             }
-            //implement filter logic
 
             return query;
         }

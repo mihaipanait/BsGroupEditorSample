@@ -283,6 +283,7 @@
     <Content Include="Views\Home\_GroupItem.cshtml" />
     <Content Include="Views\Home\_TabItem.cshtml" />
     <Content Include="Views\Home\_GroupEditor.cshtml" />
+    <Content Include="Views\Home\_Search.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

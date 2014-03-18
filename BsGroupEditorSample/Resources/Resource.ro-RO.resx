@@ -165,6 +165,12 @@
   <data name="RequiredField" xml:space="preserve">
     <value>Câmp obligatoriu</value>
   </data>
+  <data name="Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Caută</value>
+  </data>
   <data name="Visibility" xml:space="preserve">
     <value>Vizibilitate</value>
   </data>

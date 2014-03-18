@@ -32,7 +32,7 @@
             initEditorForm: $.proxy(function ($form, uid, tabModel) {
 
                 if (uid == "2.Search") {
-                   // this._initSearchForm($form, uid);
+                   this._initSearchForm($form, uid);
                 } else if (uid == "1.New") {
                    // this._initAddForm($form, uid);
                 }

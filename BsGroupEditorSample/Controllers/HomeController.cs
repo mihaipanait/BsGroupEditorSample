@@ -120,7 +120,6 @@ namespace BsGroupEditorSample.Controllers
             count = 0;
 
             var model = new GroupEditorModel();
-            //settings.TabId = settings.TabId;
 
             switch (settings.TabId)
             {

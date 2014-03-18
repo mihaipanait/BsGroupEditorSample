@@ -10,24 +10,27 @@
         var tab1 = cfg.For(x => x.Tab1)
             //.Editable()
             .Template(x => x.Grid, "_TabItem")
-            //.Template(x => x.Search, "~/Areas/Demo/Views/Contributors/Toolbar/_Search.cshtml")
+            .Template(x => x.Search, "~/Views/Home/_Search.cshtml")
             //.Template(x => x.New, "~/Areas/Demo/Views/Contributors/Toolbar/_New.cshtml")
             .ConnectsWith(MenuTypes.MainMenu, MenuTypes.AdminMenu, MenuTypes.FooterMenu);
 
         var tab2 = cfg.For(x => x.Tab2)
             .Template(x => x.Grid, "_TabItem")
-            //.Template(x => x.Search, "~/Areas/Demo/Views/Contributors/Toolbar/_Search.cshtml")
+            //.Template(x => x.Search, "~/Views/Home/_Search.cshtml")
             //.Template(x => x.New, "~/Areas/Demo/Views/Contributors/Toolbar/_New.cshtml")
             .ConnectsWith(MenuTypes.MainMenu, MenuTypes.FooterMenu);
 
         var tab3 = cfg.For(x => x.Tab3)
             .Template(x => x.Grid, "_TabItem")
-            //.Template(x => x.Search, "~/Areas/Demo/Views/Contributors/Toolbar/_Search.cshtml")
+            //.Template(x => x.Search, "~/Views/Home/_Search.cshtml")
             //.Template(x => x.New, "~/Areas/Demo/Views/Contributors/Toolbar/_New.cshtml")
             .ConnectsWith(MenuTypes.MainMenu, MenuTypes.FooterMenu);
 
 
         tab1.BulkMove = false;
+        tab1.Toolbar.QuickSearch = true;
+        tab2.Toolbar.QuickSearch = true;
+        tab3.Toolbar.QuickSearch = true;
 
         cfg.Title = "Menu Items";
 

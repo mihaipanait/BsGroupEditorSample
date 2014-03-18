@@ -1,0 +1,33 @@
+﻿@using BForms.Html
+@using BForms.Models
+@using BsGroupEditorSample.Resources
+@using BsGroupEditorSample.Mock
+@model BsGroupEditorSample.Models.MenuItemSearchModel
+
+
+@using (Html.BsBeginForm())
+{
+    <div class="col-sm-6 col-lg-6 form-group">
+        @Html.BsLabelFor(m => m.DisplayName)
+        <div class="input-group">
+            @Html.BsGlyphiconAddon(Glyphicon.Tag)
+            @Html.BsInputFor(m => m.DisplayName)
+        </div>
+    </div>
+
+    @*
+    <div class="col-sm-6 col-lg-6 form-group">
+        @Html.BsLabelFor(m => m.Visibility)
+        <div class="input-group">
+            @Html.BsSelectFor(m => m.Visibility, new Dictionary<string, object>() { { "data-initialvalue", (byte)MenuItemVisibility.Any } }, null)
+        </div>
+    </div>
+        *@
+
+    
+    <div class="col-sm-12 col-md-12 col-lg-12 grid_toolbar_submit">
+        <button type="submit" class="btn btn-default js-btn-search">@Resource.Search</button>
+        <a href="#" class="js-btn-reset">@Resource.Reset</a>
+    </div>
+}
+

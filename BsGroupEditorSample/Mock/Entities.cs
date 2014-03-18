@@ -43,11 +43,21 @@ namespace BsGroupEditorSample.Mock
                             MenuItemType = MenuItemTypes.Page,
                             Link = "/AdminHome.html",
                             Icon = Glyphicon.Cog,
-                            Visibility = MenuItemVisibility.Both
+                            Visibility = MenuItemVisibility.BackEnd
                         },
                         new MenuItem()
                         {
                             Id = 4,
+                            DisplayNameLocal = "LogIn",
+                            DisplayNameInternational = "LogIn",
+                            MenuItemType = MenuItemTypes.Page,
+                            Link = "/LogIn.html",
+                            Icon = Glyphicon.User,
+                            Visibility = MenuItemVisibility.Both
+                        },
+                        new MenuItem()
+                        {
+                            Id = 5,
                             DisplayNameLocal = "Site Statistics",
                             DisplayNameInternational = "Site Statistics",
                             MenuItemType = MenuItemTypes.Page,
@@ -57,7 +67,7 @@ namespace BsGroupEditorSample.Mock
                         },
                         new MenuItem()
                         {
-                            Id = 5,
+                            Id = 6,
                             DisplayNameLocal = "Users Management",
                             DisplayNameInternational = "Users Management",
                             MenuItemType = MenuItemTypes.Page,
@@ -67,7 +77,7 @@ namespace BsGroupEditorSample.Mock
                         },
                         new MenuItem()
                         {
-                            Id = 6,
+                            Id = 7,
                             DisplayNameLocal = "News",
                             DisplayNameInternational = "News",
                             MenuItemType = MenuItemTypes.Category,
@@ -77,7 +87,7 @@ namespace BsGroupEditorSample.Mock
                         },
                         new MenuItem()
                         {
-                            Id = 7,
+                            Id = 8,
                             DisplayNameLocal = "Products",
                             DisplayNameInternational = "Products",
                             MenuItemType = MenuItemTypes.Category,
@@ -87,7 +97,7 @@ namespace BsGroupEditorSample.Mock
                         },
                         new MenuItem()
                         {
-                            Id = 8,
+                            Id = 9,
                             DisplayNameLocal = "Reviews",
                             DisplayNameInternational = "Reviews",
                             MenuItemType = MenuItemTypes.Category,
@@ -97,7 +107,7 @@ namespace BsGroupEditorSample.Mock
                         },
                         new MenuItem()
                         {
-                            Id = 9,
+                            Id = 10,
                             DisplayNameLocal = "Google Search",
                             DisplayNameInternational = "Google Search",
                             MenuItemType = MenuItemTypes.CustomLink,
@@ -107,7 +117,7 @@ namespace BsGroupEditorSample.Mock
                         },
                         new MenuItem()
                         {
-                            Id = 10,
+                            Id = 11,
                             DisplayNameLocal = "Bing Search",
                             DisplayNameInternational = "Bing Search",
                             MenuItemType = MenuItemTypes.CustomLink,

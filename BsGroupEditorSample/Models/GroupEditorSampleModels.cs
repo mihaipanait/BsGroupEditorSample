@@ -16,6 +16,8 @@ namespace BsGroupEditorSample.Models
         public string DisplayNameLocal { get; set; }
         public string DisplayNameInternational { get; set; }
         public string Permissions { get; set; }
+        public string Link { get; set; }
+        public Glyphicon? Icon { get; set; }
 
         public override object GetUniqueID()
         {
