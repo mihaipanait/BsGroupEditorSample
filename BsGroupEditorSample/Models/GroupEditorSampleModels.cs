@@ -35,7 +35,7 @@ namespace BsGroupEditorSample.Models
 
     public class GroupEditorModel
     {
-        [BsEditorTab(Name = "Pages", Id = MenuItemTypes.Page, Selected = false)]
+        [BsEditorTab(Name = "Pages", Id = MenuItemTypes.Page, Selected = true)]
         public BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, PageNewModel> Tab1 { get; set; }
 
         [BsEditorTab(Name = "Custom Links", Id = MenuItemTypes.CustomLink, Selected = false)]
@@ -52,6 +52,11 @@ namespace BsGroupEditorSample.Models
 
         [BsEditorGroup(Id = MenuTypes.AdminMenu)]
         public BsEditorGroupModel<SampleGroupRowModel> Group3 { get; set; }
+    }
+
+    public class GroupEditorViewModel
+    {
+        public GroupEditorModel Editor { get; set; }
     }
 
     public class MenuItemSearchModel

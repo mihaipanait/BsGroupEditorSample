@@ -1,0 +1,24 @@
+﻿@model BsGroupEditorSample.Models.GroupEditorModel
+
+@using BsGroupEditorSample.Models
+@using BForms.Html
+@using BForms.Models
+@using BForms.Grid
+@using BForms.Editor
+
+@{
+    var builder = (BsEditorHtmlBuilder<GroupEditorModel>)ViewData["builder"];
+}
+
+@(Html.BsGroupEditorFor(Model, builder)
+        .HtmlAttributes(new Dictionary<string, object>() { { "id", "myGroupEditor" } })
+        .ConfigureTabs(cfg =>
+        {
+            var tab1 = cfg.For(x => x.Tab1);
+
+            //tab1.For(x => x.Search).Button("Caută", Glyphicon.Plus);
+
+            tab1.For(x => x.Grid);
+
+            tab1.Toolbar.QuickSearch = true;
+        }))

@@ -3,12 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using BsGroupEditorSample.Mock;
 using RequireJS;
 
 namespace BsGroupEditorSample.Controllers
 {
     public class BaseController : RequireJS.RequireJsController
     {
+        public BFormsContext Db
+        {
+            get
+            {
+                return BFormsContext.Get();
+            }
+
+        }
+
         public override void RegisterGlobalOptions()
         {
             RequireJsOptions.Add(

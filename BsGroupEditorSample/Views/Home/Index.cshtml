@@ -1,1 +1,27 @@
-﻿
+﻿@using BForms.Html
+@using BsGroupEditorSample.Resources
+@using BForms.Models
+@using BForms.Grid
+@using BsGroupEditorSample.Controllers
+@model BsGroupEditorSample.Models.GroupEditorViewModel
+
+@{
+    ViewBag.Title = "Group Editor Demo";
+}
+
+<style type="text/css">
+    body {
+        max-width: 1400px;
+        margin: 50px auto;
+    }
+
+    .ui-effects-transfer {
+        border: 1px dotted black;
+    }
+</style>
+
+<div class="grid_container">
+
+    @Html.Partial("_Editors", Model)
+
+</div>

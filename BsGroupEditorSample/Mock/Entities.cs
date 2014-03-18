@@ -71,7 +71,7 @@ namespace BsGroupEditorSample.Mock
                         },
                         new MenuItem()
                         {
-                            Id = 5,
+                            Id = 7,
                             DisplayName = "Products",
                             MenuItemType = MenuItemTypes.Category,
                             Link = "/Blog?type=product",
@@ -80,7 +80,7 @@ namespace BsGroupEditorSample.Mock
                         },
                         new MenuItem()
                         {
-                            Id = 5,
+                            Id = 8,
                             DisplayName = "Reviews",
                             MenuItemType = MenuItemTypes.Category,
                             Link = "/Blog?type=review",
@@ -89,7 +89,7 @@ namespace BsGroupEditorSample.Mock
                         },
                         new MenuItem()
                         {
-                            Id = 5,
+                            Id = 9,
                             DisplayName = "Google Search",
                             MenuItemType = MenuItemTypes.CustomLink,
                             Link = "www.google.com?search=bforms",
@@ -98,7 +98,7 @@ namespace BsGroupEditorSample.Mock
                         },
                         new MenuItem()
                         {
-                            Id = 5,
+                            Id = 10,
                             DisplayName = "Bing Search",
                             MenuItemType = MenuItemTypes.CustomLink,
                             Link = "www.bing.com?search=bforms",
