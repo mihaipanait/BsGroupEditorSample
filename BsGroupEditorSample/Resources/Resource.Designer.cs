@@ -126,6 +126,24 @@ namespace BsGroupEditorSample.Resources {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        public static string DisplayNameInternational {
+            get {
+                return ResourceManager.GetString("DisplayNameInternational", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string DisplayNameLocal {
+            get {
+                return ResourceManager.GetString("DisplayNameLocal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         public static string Icon {
             get {
                 return ResourceManager.GetString("Icon", resourceCulture);
@@ -210,6 +228,15 @@ namespace BsGroupEditorSample.Resources {
         public static string Search {
             get {
                 return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string ServerError {
+            get {
+                return ResourceManager.GetString("ServerError", resourceCulture);
             }
         }
         

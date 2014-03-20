@@ -138,6 +138,12 @@
   <data name="DisplayName" xml:space="preserve">
     <value>Display name</value>
   </data>
+  <data name="DisplayNameInternational" xml:space="preserve">
+    <value>International Display Name</value>
+  </data>
+  <data name="DisplayNameLocal" xml:space="preserve">
+    <value>Local Display Name</value>
+  </data>
   <data name="Icon" xml:space="preserve">
     <value>Icon</value>
   </data>
@@ -167,6 +173,9 @@
   </data>
   <data name="Search" xml:space="preserve">
     <value>Search</value>
+  </data>
+  <data name="ServerError" xml:space="preserve">
+    <value>Server Error</value>
   </data>
   <data name="UsersArea" xml:space="preserve">
     <value>Users Area</value>

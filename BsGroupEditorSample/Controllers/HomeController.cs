@@ -10,6 +10,7 @@ using BForms.Mvc;
 using BsGroupEditorSample.Mock;
 using BsGroupEditorSample.Models;
 using BsGroupEditorSample.Repositories;
+using BsGroupEditorSample.Resources;
 
 namespace BsGroupEditorSample.Controllers
 {
@@ -37,7 +38,7 @@ namespace BsGroupEditorSample.Controllers
                 {
                     Grid = repo.ToBsGridViewModel(bsGridSettings),
                     Search = repo.GetSearchForm(),
-                    New = repo.GetNewForm() as PageNewModel
+                    New = repo.GetNewPageForm()
                 },
 
                 Group1 = new BsEditorGroupModel<SampleGroupRowModel>
@@ -66,7 +67,7 @@ namespace BsGroupEditorSample.Controllers
                 getTabUrl = Url.Action("GetTab"),
                 save = Url.Action("Save"),
                 advancedSearchUrl = Url.Action("Search"),
-                addUrl = Url.Action("New")
+                addUrl = Url.Action("NewPage")
             };
 
             RequireJsOptions.Add("index", options);
@@ -116,9 +117,58 @@ namespace BsGroupEditorSample.Controllers
             });
         }
 
-        public ActionResult New()
+        public BsJsonResult NewPage(PageNewModel model)
         {
-            throw new NotImplementedException();
+            var status = BsResponseStatus.Success;
+            var row = string.Empty;
+            var msg = string.Empty;
+
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var rowModel = repo.CreatePage(model);
+
+                    var groupEditorModel = new GroupEditorModel
+                    {
+                        
+                        Tab1 = new BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, PageNewModel>
+                        {
+                            Grid = new BsGridModel<SampleGroupRowModel>
+                            {
+                                Items = new List<SampleGroupRowModel>
+                                {
+                                    rowModel
+                                }
+                            }
+                        }
+                    };
+
+                    var viewModel = new GroupEditorViewModel()
+                    {
+                        Editor = groupEditorModel
+                    };
+
+                    row = this.BsRenderPartialView("_Editors", viewModel);
+
+                }
+                else
+                {
+                    return new BsJsonResult(
+                        new Dictionary<string, object> { { "Errors", ModelState.GetErrors() } },
+                        BsResponseStatus.ValidationError);
+                }
+            }
+            catch (Exception ex)
+            {
+                msg = Resource.ServerError;
+                status = BsResponseStatus.ServerError;
+            }
+
+            return new BsJsonResult(new
+            {
+                Row = row
+            }, status, msg);
         }
 
          [NonAction]
@@ -139,7 +189,7 @@ namespace BsGroupEditorSample.Controllers
                     {
                         Grid = grid1,
                         Search = repo.GetSearchForm(),
-                        New = repo.GetNewForm() as PageNewModel
+                        New = repo.GetNewPageForm()
                     };
                     break;
 
@@ -151,7 +201,7 @@ namespace BsGroupEditorSample.Controllers
                     {
                         Grid = grid2,
                         Search = repo.GetSearchForm(),
-                        New = repo.GetNewForm() as CustomLinkNewModel
+                        New = repo.GetNewLinkForm()
                     };
                     break;
 
@@ -163,7 +213,7 @@ namespace BsGroupEditorSample.Controllers
                     {
                         Grid = grid3,
                         Search = repo.GetSearchForm(),
-                        New = repo.GetNewForm() as CategoryNewModel
+                        New = repo.GetNewCategoryForm()
                     };
                     break;
             }
@@ -176,6 +226,11 @@ namespace BsGroupEditorSample.Controllers
             html = this.BsRenderPartialView("_Editors", viewModel);
 
             return html;
+        }
+
+        public ActionResult Save()
+        {
+            throw new NotImplementedException();
         }
     }
 }

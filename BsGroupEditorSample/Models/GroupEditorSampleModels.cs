@@ -102,9 +102,14 @@ namespace BsGroupEditorSample.Models
         public BsSelectList<MenuItemVisibility> Visibility { get; set; }
 
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Resource))]
-        [Display(Name = "DisplayName", ResourceType = typeof(Resource))]
+        [Display(Name = "DisplayNameLocal", ResourceType = typeof(Resource))]
         [BsControl(BsControlType.TextBox)]
-        public string DisplayName { get; set; }
+        public string DisplayNameLocal { get; set; }
+
+        [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Resource))]
+        [Display(Name = "DisplayNameInternational", ResourceType = typeof(Resource))]
+        [BsControl(BsControlType.TextBox)]
+        public string DisplayNameInternational { get; set; }
 
         [Required(ErrorMessageResourceName = "RequiredField", ErrorMessageResourceType = typeof(Resource))]
         [Display(Name = "Link", ResourceType = typeof(Resource))]

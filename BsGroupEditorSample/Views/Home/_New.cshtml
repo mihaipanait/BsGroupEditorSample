@@ -2,36 +2,56 @@
 @using BForms.Models
 @using BsGroupEditorSample.Resources
 @using BsGroupEditorSample.Mock
-@model BsGroupEditorSample.Models.MenuItemNewModel
+@model BsGroupEditorSample.Models.PageNewModel
 
 
 @using (Html.BsBeginForm())
 {
     <div class="col-sm-6 col-lg-6 form-group">
-        @Html.BsLabelFor(m => m.DisplayName)
+        @Html.BsLabelFor(m => m.DisplayNameLocal)
         <div class="input-group">
             @Html.BsGlyphiconAddon(Glyphicon.Tag)
-            @Html.BsInputFor(m => m.DisplayName)
+            @Html.BsInputFor(m => m.DisplayNameLocal)
+            @Html.BsValidationFor(m => m.DisplayNameLocal)
+        </div>
+    </div>
+    
+    <div class="col-sm-6 col-lg-6 form-group">
+        @Html.BsLabelFor(m => m.DisplayNameInternational)
+        <div class="input-group">
+            @Html.BsGlyphiconAddon(Glyphicon.Tag)
+            @Html.BsInputFor(m => m.DisplayNameInternational)
+            @Html.BsValidationFor(m => m.DisplayNameInternational)
         </div>
     </div>
     
     <div class="col-sm-6 col-lg-6 form-group">
         @Html.BsLabelFor(m => m.Link)
         <div class="input-group">
-            @Html.BsGlyphiconAddon(Glyphicon.Tag)
+            @Html.BsGlyphiconAddon(Glyphicon.Link)
             @Html.BsInputFor(m => m.Link)
+            @Html.BsValidationFor(m => m.Link)
         </div>
     </div>
+    
+    <div class="col-sm-6 col-lg-6 form-group">
+        @Html.BsLabelFor(m => m.Icon)
+        <div class="input-group">
+            @Html.BsSelectFor(m => m.Icon)
+            @Html.BsValidationFor(m => m.Icon)
+        </div>
+    </div>  
     
     <div class="col-sm-12 col-lg-12 form-group">
         @Html.BsLabelFor(m => m.Visibility)
         <div class="input-group">
             @Html.BsSelectFor(m => m.Visibility)
+            @Html.BsValidationFor(m => m.Visibility)
         </div>
     </div>    
     
     <div class="col-sm-12 col-md-12 col-lg-12 grid_toolbar_submit">
-        <button type="submit" class="btn btn-white js-btn-save" data-action="@Url.Action("New")">@Resource.Add</button>
+        <button type="submit" class="btn btn-white js-btn-save" data-action="@Url.Action("NewPage")">@Resource.Add</button>
         <a href="#" class="js-btn-reset">@Resource.Reset</a>
     </div>
     

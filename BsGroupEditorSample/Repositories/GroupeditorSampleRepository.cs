@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Web;
 using BForms.Grid;
@@ -125,9 +126,40 @@ namespace BsGroupEditorSample.Repositories
             return new MenuItemSearchModel();
         }
 
-        internal MenuItemNewModel GetNewForm()
+        internal PageNewModel GetNewPageForm()
         {
-            return new MenuItemNewModel();
+            return new PageNewModel();
+        }
+
+        internal CustomLinkNewModel GetNewLinkForm()
+        {
+            return new CustomLinkNewModel();
+        }
+
+        internal CategoryNewModel GetNewCategoryForm()
+        {
+            return new CategoryNewModel();
+        }
+
+        public SampleGroupRowModel CreatePage(PageNewModel model)
+        {
+            var entity = new MenuItem();
+            if(model != null)
+            {
+                entity.DisplayNameInternational = model.DisplayNameInternational;
+                entity.DisplayNameLocal = model.DisplayNameLocal;
+                entity.MenuItemType = model.MenuItemType;
+                entity.Link = model.Link;
+                entity.Visibility = model.Visibility.SelectedValues;
+
+                if (model.Icon.SelectedValues.HasValue)
+                    entity.Icon = model.Icon.SelectedValues.Value;
+
+                db.MenuItems.Add(entity);
+                db.SaveChanges();
+            }
+
+            return MapMenuItem_SampleGroupRowModel(entity);
         }
     }
 }

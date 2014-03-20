@@ -32,8 +32,8 @@
             initEditorForm: $.proxy(function ($form, uid, tabModel) {
                 if (uid == "1.Search") {
                    this._initSearchForm($form, uid);
-                } else if (uid == "2.New") {
-                   // this._initAddForm($form, uid);
+                } else if (uid == "1.New") {
+                   this._initAddForm($form, uid);
                 }
 
 
@@ -61,6 +61,35 @@
                 parse: true,
                 handler: $.proxy(function (formData, response) {
                     $('#myGroupEditor').bsGroupEditor('setTabContent', response.Html);
+                }, this)
+            }, {
+                name: 'reset',
+                selector: '.js-btn-reset',
+                handler: $.proxy(function () {
+                    $form.bsForm('reset');
+                }, this)
+            }]
+        });
+    };
+    
+    homeIndex.prototype._initAddForm = function ($form, uid) {
+
+        $form.bsForm({
+            uniqueName: 'newForm',
+            prefix: 'prefix' + uid + '.',
+            actions: [
+            {
+                name: 'add',
+                selector: '.js-btn-save',
+                actionUrl: this.options.addUrl,
+                parse: true,
+                validate: true,
+                handler: $.proxy(function (formData, response) {
+
+                    var $row = $(response.Row).find('.bs-tabItem');
+
+                    $('#myGroupEditor').bsGroupEditor('addTabItem', $row);
+
                 }, this)
             }, {
                 name: 'reset',

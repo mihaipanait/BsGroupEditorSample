@@ -11,20 +11,20 @@
             //.Editable()
             .Template(x => x.Grid, "_TabItem")
             .Template(x => x.Search, "~/Views/Home/_Search.cshtml")
-            //.Template(x => x.New, "~/Areas/Demo/Views/Contributors/Toolbar/_New.cshtml")
+            .Template(x => x.New, "~/Views/Home/_New.cshtml")
             .ConnectsWith(MenuTypes.PublicMenu, MenuTypes.UsersMenu, MenuTypes.AdminMenu);
 
         var tab2 = cfg.For(x => x.Tab2)
             .Template(x => x.Grid, "_TabItem")
             //.Template(x => x.Search, "~/Views/Home/_Search.cshtml")
-            //.Template(x => x.New, "~/Areas/Demo/Views/Contributors/Toolbar/_New.cshtml")
-            .ConnectsWith(MenuTypes.UsersMenu);
+            //.Template(x => x.New, "~/Views/Home/_New.cshtml")
+            .ConnectsWith(MenuTypes.PublicMenu);
 
         var tab3 = cfg.For(x => x.Tab3)
             .Template(x => x.Grid, "_TabItem")
             //.Template(x => x.Search, "~/Views/Home/_Search.cshtml")
-            //.Template(x => x.New, "~/Areas/Demo/Views/Contributors/Toolbar/_New.cshtml")
-            .ConnectsWith(MenuTypes.PublicMenu);
+            //.Template(x => x.New, "~/Views/Home/_New.cshtml")
+            .ConnectsWith(MenuTypes.UsersMenu);
 
 
         tab1.BulkMove = false;

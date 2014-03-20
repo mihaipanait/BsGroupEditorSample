@@ -138,6 +138,12 @@
   <data name="DisplayName" xml:space="preserve">
     <value>Denumire</value>
   </data>
+  <data name="DisplayNameInternational" xml:space="preserve">
+    <value>Nume International</value>
+  </data>
+  <data name="DisplayNameLocal" xml:space="preserve">
+    <value>Nume Local</value>
+  </data>
   <data name="Icon" xml:space="preserve">
     <value>Pictogramă</value>
   </data>
@@ -167,6 +173,9 @@
   </data>
   <data name="Search" xml:space="preserve">
     <value>Caută</value>
+  </data>
+  <data name="ServerError" xml:space="preserve">
+    <value>Eroare de Server</value>
   </data>
   <data name="UsersArea" xml:space="preserve">
     <value>Secțiune Utilizatori</value>
