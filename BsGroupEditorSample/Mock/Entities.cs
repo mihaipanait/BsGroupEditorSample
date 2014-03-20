@@ -23,7 +23,7 @@ namespace BsGroupEditorSample.Mock
                             MenuItemType = MenuItemTypes.Page,
                             Link = "/Home.html",
                             Icon = Glyphicon.Home,
-                            Visibility = MenuItemVisibility.Both
+                            Visibility = MenuItemVisibility.Any
                         },
                         new MenuItem()
                         {
@@ -33,7 +33,7 @@ namespace BsGroupEditorSample.Mock
                             MenuItemType = MenuItemTypes.Page,
                             Link = "/About.html",
                             Icon = Glyphicon.QuestionSign,
-                            Visibility = MenuItemVisibility.FrontEnd
+                            Visibility = MenuItemVisibility.PublicArea
                         },
                         new MenuItem()
                         {
@@ -43,7 +43,7 @@ namespace BsGroupEditorSample.Mock
                             MenuItemType = MenuItemTypes.Page,
                             Link = "/AdminHome.html",
                             Icon = Glyphicon.Cog,
-                            Visibility = MenuItemVisibility.BackEnd
+                            Visibility = MenuItemVisibility.AdminArea
                         },
                         new MenuItem()
                         {
@@ -53,7 +53,7 @@ namespace BsGroupEditorSample.Mock
                             MenuItemType = MenuItemTypes.Page,
                             Link = "/LogIn.html",
                             Icon = Glyphicon.User,
-                            Visibility = MenuItemVisibility.Both
+                            Visibility = MenuItemVisibility.PublicArea
                         },
                         new MenuItem()
                         {
@@ -63,7 +63,7 @@ namespace BsGroupEditorSample.Mock
                             MenuItemType = MenuItemTypes.Page,
                             Link = "/Statistics.html",
                             Icon = Glyphicon.Stats,
-                            Visibility = MenuItemVisibility.BackEnd
+                            Visibility = MenuItemVisibility.AdminArea
                         },
                         new MenuItem()
                         {
@@ -73,57 +73,67 @@ namespace BsGroupEditorSample.Mock
                             MenuItemType = MenuItemTypes.Page,
                             Link = "/ManageUsers.html",
                             Icon = Glyphicon.User,
-                            Visibility = MenuItemVisibility.BackEnd
+                            Visibility = MenuItemVisibility.AdminArea
                         },
                         new MenuItem()
                         {
                             Id = 7,
+                            DisplayNameLocal = "Users Profile",
+                            DisplayNameInternational = "Users Profile",
+                            MenuItemType = MenuItemTypes.Page,
+                            Link = "/UsersProfile.html",
+                            Icon = Glyphicon.User,
+                            Visibility = MenuItemVisibility.UsersArea
+                        },
+                        new MenuItem()
+                        {
+                            Id = 8,
                             DisplayNameLocal = "News",
                             DisplayNameInternational = "News",
                             MenuItemType = MenuItemTypes.Category,
                             Link = "/Blog?type=news",
                             Icon = Glyphicon.List,
-                            Visibility = MenuItemVisibility.FrontEnd
+                            Visibility = MenuItemVisibility.UsersArea
                         },
                         new MenuItem()
                         {
-                            Id = 8,
+                            Id = 9,
                             DisplayNameLocal = "Products",
                             DisplayNameInternational = "Products",
                             MenuItemType = MenuItemTypes.Category,
                             Link = "/Blog?type=product",
                             Icon = Glyphicon.Euro,
-                            Visibility = MenuItemVisibility.FrontEnd
+                            Visibility = MenuItemVisibility.UsersArea
                         },
                         new MenuItem()
                         {
-                            Id = 9,
+                            Id = 10,
                             DisplayNameLocal = "Reviews",
                             DisplayNameInternational = "Reviews",
                             MenuItemType = MenuItemTypes.Category,
                             Link = "/Blog?type=review",
                             Icon = Glyphicon.User,
-                            Visibility = MenuItemVisibility.FrontEnd
+                            Visibility = MenuItemVisibility.UsersArea
                         },
                         new MenuItem()
                         {
-                            Id = 10,
+                            Id = 11,
                             DisplayNameLocal = "Google Search",
                             DisplayNameInternational = "Google Search",
                             MenuItemType = MenuItemTypes.CustomLink,
                             Link = "www.google.com?search=bforms",
                             Icon = Glyphicon.Globe,
-                            Visibility = MenuItemVisibility.FrontEnd
+                            Visibility = MenuItemVisibility.PublicArea
                         },
                         new MenuItem()
                         {
-                            Id = 11,
+                            Id = 12,
                             DisplayNameLocal = "Bing Search",
                             DisplayNameInternational = "Bing Search",
                             MenuItemType = MenuItemTypes.CustomLink,
                             Link = "www.bing.com?search=bforms",
                             Icon = Glyphicon.Globe,
-                            Visibility = MenuItemVisibility.FrontEnd
+                            Visibility = MenuItemVisibility.PublicArea
                         }
                     };
             #endregion

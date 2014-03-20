@@ -117,17 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Add New Page</value>
+  </data>
+  <data name="AdminArea" xml:space="preserve">
+    <value>Administration Area</value>
+  </data>
   <data name="AdminMenu" xml:space="preserve">
     <value>Admin Area Menu</value>
   </data>
   <data name="Any" xml:space="preserve">
     <value>Any</value>
-  </data>
-  <data name="BackEnd" xml:space="preserve">
-    <value>Back-end</value>
-  </data>
-  <data name="Both" xml:space="preserve">
-    <value>Both</value>
   </data>
   <data name="Category" xml:space="preserve">
     <value>Category</value>
@@ -138,20 +138,11 @@
   <data name="DisplayName" xml:space="preserve">
     <value>Display name</value>
   </data>
-  <data name="FooterMenu" xml:space="preserve">
-    <value>Footer Menu</value>
-  </data>
-  <data name="FrontEnd" xml:space="preserve">
-    <value>Front-end</value>
-  </data>
   <data name="Icon" xml:space="preserve">
     <value>Icon</value>
   </data>
   <data name="Link" xml:space="preserve">
     <value>Link</value>
-  </data>
-  <data name="MainMenu" xml:space="preserve">
-    <value>Main Menu</value>
   </data>
   <data name="Page" xml:space="preserve">
     <value>Page</value>
@@ -162,6 +153,12 @@
   <data name="PromptLink" xml:space="preserve">
     <value>Relative path</value>
   </data>
+  <data name="PublicArea" xml:space="preserve">
+    <value>Public Area</value>
+  </data>
+  <data name="PublicMenu" xml:space="preserve">
+    <value>Public Area Menu</value>
+  </data>
   <data name="RequiredField" xml:space="preserve">
     <value>Required field</value>
   </data>
@@ -170,6 +167,12 @@
   </data>
   <data name="Search" xml:space="preserve">
     <value>Search</value>
+  </data>
+  <data name="UsersArea" xml:space="preserve">
+    <value>Users Area</value>
+  </data>
+  <data name="UsersMenu" xml:space="preserve">
+    <value>Users Area Menu</value>
   </data>
   <data name="Visibility" xml:space="preserve">
     <value>Visibility</value>

@@ -87,6 +87,30 @@ namespace BsGroupEditorSample.Repositories
                 }
                 else if (settings.Search != null)
                 {
+                    #region DisplayName
+                    if (!string.IsNullOrEmpty(Settings.Search.DisplayName))
+                    {
+                        var displayName = Settings.Search.DisplayName.ToLower();
+                        query = query.Where(x => x.DisplayNameLocal.ToLower().Contains(displayName) ||
+                                                 x.DisplayNameInternational.ToLower().Contains(displayName));
+                    }
+                    #endregion
+
+                    #region Link
+                    if (!string.IsNullOrEmpty(Settings.Search.Link))
+                    {
+                        var link = Settings.Search.Link.ToLower();
+                        query = query.Where(x => x.Link.ToLower().Contains(link));
+                    }
+                    #endregion
+
+                    #region DisplayName
+                    if (Settings.Search.Visibility.SelectedValues.HasValue)
+                    {
+                        var visibility = Settings.Search.Visibility.SelectedValues.Value;
+                        query = query.Where(x => x.Visibility == visibility);
+                    }
+                    #endregion
                 }
             }
 

@@ -48,10 +48,10 @@ namespace BsGroupEditorSample.Models
         [BsEditorTab(Name = "Categories", Id = MenuItemTypes.Category, Selected = false)]
         public BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, CategoryNewModel> Tab3 { get; set; }
 
-        [BsEditorGroup(Id = MenuTypes.MainMenu)]
+        [BsEditorGroup(Id = MenuTypes.PublicMenu)]
         public BsEditorGroupModel<SampleGroupRowModel> Group1 { get; set; }
 
-        [BsEditorGroup(Id = MenuTypes.FooterMenu)]
+        [BsEditorGroup(Id = MenuTypes.UsersMenu)]
         public BsEditorGroupModel<SampleGroupRowModel> Group2 { get; set; }
 
         [BsEditorGroup(Id = MenuTypes.AdminMenu)]
@@ -69,12 +69,15 @@ namespace BsGroupEditorSample.Models
         {
             Visibility = new BsSelectList<MenuItemVisibility?>();
             Visibility.ItemsFromEnum(typeof(MenuItemVisibility));
-            Visibility.SelectedValues = MenuItemVisibility.Both;
         }
 
         [Display(Name = "DisplayName", ResourceType = typeof(Resource))]
         [BsControl(BsControlType.TextBox)]
         public string DisplayName { get; set; }
+
+        [Display(Name = "Link", ResourceType = typeof(Resource))]
+        [BsControl(BsControlType.TextBox)]
+        public string Link { get; set; }
 
         [BsControl(BsControlType.RadioButtonList)]
         [Display(Name = "Visibility", ResourceType = typeof(Resource))]
@@ -86,8 +89,8 @@ namespace BsGroupEditorSample.Models
         public MenuItemNewModel()
         {
             Visibility = new BsSelectList<MenuItemVisibility>();
-            Visibility.ItemsFromEnum(typeof(MenuItemVisibility), MenuItemVisibility.Any);
-            Visibility.SelectedValues = MenuItemVisibility.Both;
+            Visibility.ItemsFromEnum(typeof(MenuItemVisibility));
+            Visibility.SelectedValues = MenuItemVisibility.Any;
 
             Icon = new BsSelectList<Glyphicon?>();
             Icon.ItemsFromEnum(typeof(Glyphicon));

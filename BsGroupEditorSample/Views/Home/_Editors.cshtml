@@ -12,19 +12,19 @@
             .Template(x => x.Grid, "_TabItem")
             .Template(x => x.Search, "~/Views/Home/_Search.cshtml")
             //.Template(x => x.New, "~/Areas/Demo/Views/Contributors/Toolbar/_New.cshtml")
-            .ConnectsWith(MenuTypes.MainMenu, MenuTypes.AdminMenu, MenuTypes.FooterMenu);
+            .ConnectsWith(MenuTypes.PublicMenu, MenuTypes.UsersMenu, MenuTypes.AdminMenu);
 
         var tab2 = cfg.For(x => x.Tab2)
             .Template(x => x.Grid, "_TabItem")
             //.Template(x => x.Search, "~/Views/Home/_Search.cshtml")
             //.Template(x => x.New, "~/Areas/Demo/Views/Contributors/Toolbar/_New.cshtml")
-            .ConnectsWith(MenuTypes.MainMenu, MenuTypes.FooterMenu);
+            .ConnectsWith(MenuTypes.UsersMenu);
 
         var tab3 = cfg.For(x => x.Tab3)
             .Template(x => x.Grid, "_TabItem")
             //.Template(x => x.Search, "~/Views/Home/_Search.cshtml")
             //.Template(x => x.New, "~/Areas/Demo/Views/Contributors/Toolbar/_New.cshtml")
-            .ConnectsWith(MenuTypes.MainMenu, MenuTypes.FooterMenu);
+            .ConnectsWith(MenuTypes.PublicMenu);
 
 
         tab1.BulkMove = false;
@@ -38,13 +38,13 @@
         .ConfigureGroups(cfg =>
         {
             cfg.For(x => x.Group1)
-                .DisplayText("Adauga la Main Menu")
-                .DisplayName("Main Menu (FrontEnd)")
+                .DisplayText("Adauga la Public Menu")
+                .DisplayName("Public Menu (FrontEnd)")
                 .Template(x => x.Items, "_GroupItem");
 
             cfg.For(x => x.Group2)
-                .DisplayText("Adauga la Footer Menu")
-                .DisplayName("Footer Menu (FrontEnd)")
+                .DisplayText("Adauga la Users Menu")
+                .DisplayName("Users Menu (Authentication Required)")
                 .Template(x => x.Items, "_GroupItem");
 
             cfg.For(x => x.Group3)

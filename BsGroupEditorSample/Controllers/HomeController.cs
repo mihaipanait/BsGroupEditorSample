@@ -98,14 +98,22 @@ namespace BsGroupEditorSample.Controllers
             }, status, msg);
         }
 
-        public ActionResult Save()
+        public BsJsonResult Search(MenuItemSearchModel model)
         {
-            throw new NotImplementedException();
-        }
+            var settings = new GroupEditorSettings
+            {
+                Search = model,
+                TabId = MenuItemTypes.Page
+            };
+            var count = 0;
 
-        public ActionResult Search()
-        {
-            throw new NotImplementedException();
+            var html = this.RenderTab(settings, out count);
+
+            return new BsJsonResult(new
+            {
+                Count = count,
+                Html = html
+            });
         }
 
         public ActionResult New()

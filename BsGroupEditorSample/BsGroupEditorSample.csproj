@@ -14,7 +14,7 @@
     <RootNamespace>BsGroupEditorSample</RootNamespace>
     <AssemblyName>BsGroupEditorSample</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
-    <UseIISExpress>true</UseIISExpress>
+    <UseIISExpress>false</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
@@ -284,6 +284,7 @@
     <Content Include="Views\Home\_TabItem.cshtml" />
     <Content Include="Views\Home\_GroupEditor.cshtml" />
     <Content Include="Views\Home\_Search.cshtml" />
+    <Content Include="Views\Home\_New.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -324,7 +325,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>57884</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:57884/</IISUrl>
+          <IISUrl>http://localhost/BsGroupEditorSample</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

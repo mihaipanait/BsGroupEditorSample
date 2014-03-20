@@ -23,17 +23,16 @@
                 return $('<span>' + model.DisplayNameInternational + '</span>');
             }, this),
             validateMove: function (model, tabId, $group) {
-                if (model.Permissions == "BackEnd" && $group.data('groupid') == 1) return false;
-                else if (model.Permissions == "BackEnd" && $group.data('groupid') == 2) return false;
-                else if (model.Permissions == "FrontEnd" && $group.data('groupid') == 3) return false;
+                if (model.Permissions == "PublicArea" && ($group.data('groupid') == 2 || $group.data('groupid') == 3)) return false;
+                else if (model.Permissions == "UsersArea" && ($group.data('groupid') == 1 || $group.data('groupid') == 3)) return false;
+                else if (model.Permissions == "AdminArea" && ($group.data('groupid') == 1 || $group.data('groupid') == 2)) return false;
             },
             onSaveSuccess: $.proxy(function () {
             }, this),
             initEditorForm: $.proxy(function ($form, uid, tabModel) {
-
-                if (uid == "2.Search") {
+                if (uid == "1.Search") {
                    this._initSearchForm($form, uid);
-                } else if (uid == "1.New") {
+                } else if (uid == "2.New") {
                    // this._initAddForm($form, uid);
                 }
 
@@ -49,6 +48,29 @@
     };
     //#endregion
 
+
+    homeIndex.prototype._initSearchForm = function($form, uid) {
+        $form.bsForm({
+            uniqueName: 'searchForm',
+            prefix: 'prefix' + uid + '.',
+            actions: [
+            {
+                name: 'search',
+                selector: '.js-btn-search',
+                actionUrl: this.options.advancedSearchUrl,
+                parse: true,
+                handler: $.proxy(function (formData, response) {
+                    $('#myGroupEditor').bsGroupEditor('setTabContent', response.Html);
+                }, this)
+            }, {
+                name: 'reset',
+                selector: '.js-btn-reset',
+                handler: $.proxy(function () {
+                    $form.bsForm('reset');
+                }, this)
+            }]
+        });
+    };
 
     //#region Dom Ready
     $(document).ready(function () {

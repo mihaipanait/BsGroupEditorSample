@@ -9,10 +9,10 @@ namespace BsGroupEditorSample.Mock
 {
     public enum MenuTypes
     {
-        [Display(Name = "MainMenu", ResourceType = typeof(Resource))]
-        MainMenu = 1,
-        [Display(Name = "FooterMenu", ResourceType = typeof(Resource))]
-        FooterMenu = 2,
+        [Display(Name = "PublicMenu", ResourceType = typeof(Resource))]
+        PublicMenu = 1,
+        [Display(Name = "UsersMenu", ResourceType = typeof(Resource))]
+        UsersMenu = 2,
         [Display(Name = "AdminMenu", ResourceType = typeof(Resource))]
         AdminMenu = 3
     }
@@ -29,12 +29,12 @@ namespace BsGroupEditorSample.Mock
 
     public enum MenuItemVisibility
     {
-        [Display(Name = "Both", ResourceType = typeof(Resource))]
-        Both = 1,
-        [Display(Name = "FrontEnd", ResourceType = typeof(Resource))]
-        FrontEnd = 2,
-        [Display(Name = "BackEnd", ResourceType = typeof(Resource))]
-        BackEnd = 3,
+        [Display(Name = "PublicArea", ResourceType = typeof(Resource))]
+        PublicArea = 1,
+        [Display(Name = "UsersArea", ResourceType = typeof(Resource))]
+        UsersArea = 2,
+        [Display(Name = "AdminArea", ResourceType = typeof(Resource))]
+        AdminArea = 3,
         [Display(Name = "Any", ResourceType = typeof(Resource))]
         Any = 4
     }

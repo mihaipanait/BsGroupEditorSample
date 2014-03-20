@@ -117,17 +117,17 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Adaugă Pagină Nouă</value>
+  </data>
+  <data name="AdminArea" xml:space="preserve">
+    <value>Secțiune Administrare</value>
+  </data>
   <data name="AdminMenu" xml:space="preserve">
     <value>Meniu Secțiune Administrare</value>
   </data>
   <data name="Any" xml:space="preserve">
     <value>Oricare</value>
-  </data>
-  <data name="BackEnd" xml:space="preserve">
-    <value>Privat</value>
-  </data>
-  <data name="Both" xml:space="preserve">
-    <value>Ambele</value>
   </data>
   <data name="Category" xml:space="preserve">
     <value>Categorie</value>
@@ -138,20 +138,11 @@
   <data name="DisplayName" xml:space="preserve">
     <value>Denumire</value>
   </data>
-  <data name="FooterMenu" xml:space="preserve">
-    <value>Meniu Secundar</value>
-  </data>
-  <data name="FrontEnd" xml:space="preserve">
-    <value>Public</value>
-  </data>
   <data name="Icon" xml:space="preserve">
     <value>Pictogramă</value>
   </data>
   <data name="Link" xml:space="preserve">
     <value>Link</value>
-  </data>
-  <data name="MainMenu" xml:space="preserve">
-    <value>Meniu Principal</value>
   </data>
   <data name="Page" xml:space="preserve">
     <value>Pagină</value>
@@ -162,6 +153,12 @@
   <data name="PromptLink" xml:space="preserve">
     <value>Inserați calea relativă</value>
   </data>
+  <data name="PublicArea" xml:space="preserve">
+    <value>Secțiune Publică</value>
+  </data>
+  <data name="PublicMenu" xml:space="preserve">
+    <value>Meniu Public</value>
+  </data>
   <data name="RequiredField" xml:space="preserve">
     <value>Câmp obligatoriu</value>
   </data>
@@ -170,6 +167,12 @@
   </data>
   <data name="Search" xml:space="preserve">
     <value>Caută</value>
+  </data>
+  <data name="UsersArea" xml:space="preserve">
+    <value>Secțiune Utilizatori</value>
+  </data>
+  <data name="UsersMenu" xml:space="preserve">
+    <value>Meniu Sectiune Utilizatori</value>
   </data>
   <data name="Visibility" xml:space="preserve">
     <value>Vizibilitate</value>

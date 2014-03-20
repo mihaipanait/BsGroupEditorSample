@@ -63,6 +63,24 @@ namespace BsGroupEditorSample.Resources {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        public static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string AdminArea {
+            get {
+                return ResourceManager.GetString("AdminArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         public static string AdminMenu {
             get {
                 return ResourceManager.GetString("AdminMenu", resourceCulture);
@@ -75,24 +93,6 @@ namespace BsGroupEditorSample.Resources {
         public static string Any {
             get {
                 return ResourceManager.GetString("Any", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        public static string BackEnd {
-            get {
-                return ResourceManager.GetString("BackEnd", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        public static string Both {
-            get {
-                return ResourceManager.GetString("Both", resourceCulture);
             }
         }
         
@@ -126,24 +126,6 @@ namespace BsGroupEditorSample.Resources {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
-        public static string FooterMenu {
-            get {
-                return ResourceManager.GetString("FooterMenu", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        public static string FrontEnd {
-            get {
-                return ResourceManager.GetString("FrontEnd", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
         public static string Icon {
             get {
                 return ResourceManager.GetString("Icon", resourceCulture);
@@ -156,15 +138,6 @@ namespace BsGroupEditorSample.Resources {
         public static string Link {
             get {
                 return ResourceManager.GetString("Link", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to .
-        /// </summary>
-        public static string MainMenu {
-            get {
-                return ResourceManager.GetString("MainMenu", resourceCulture);
             }
         }
         
@@ -198,6 +171,24 @@ namespace BsGroupEditorSample.Resources {
         /// <summary>
         ///   Looks up a localized string similar to .
         /// </summary>
+        public static string PublicArea {
+            get {
+                return ResourceManager.GetString("PublicArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string PublicMenu {
+            get {
+                return ResourceManager.GetString("PublicMenu", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
         public static string RequiredField {
             get {
                 return ResourceManager.GetString("RequiredField", resourceCulture);
@@ -219,6 +210,24 @@ namespace BsGroupEditorSample.Resources {
         public static string Search {
             get {
                 return ResourceManager.GetString("Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string UsersArea {
+            get {
+                return ResourceManager.GetString("UsersArea", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to .
+        /// </summary>
+        public static string UsersMenu {
+            get {
+                return ResourceManager.GetString("UsersMenu", resourceCulture);
             }
         }
         
