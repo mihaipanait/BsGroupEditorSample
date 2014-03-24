@@ -11,7 +11,7 @@
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BsGroupEditorSample</RootNamespace>
+    <RootNamespace>Menu</RootNamespace>
     <AssemblyName>BsGroupEditorSample</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>false</UseIISExpress>
@@ -240,9 +240,9 @@
     <Compile Include="Mock\Entities.cs" />
     <Compile Include="Mock\Enums.cs" />
     <Compile Include="Mock\Lists.cs" />
-    <Compile Include="Models\GroupEditorSampleModels.cs" />
+    <Compile Include="Models\MenuModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\GroupEditorSampleRepository.cs" />
+    <Compile Include="Repositories\MenuRepository.cs" />
     <Compile Include="Resources\Resource.en-US.Designer.cs">
       <DependentUpon>Resource.en-US.resx</DependentUpon>
       <AutoGen>True</AutoGen>

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
-using BsGroupEditorSample.Resources;
+using Menu.Resources;
 
-namespace BsGroupEditorSample.Mock
+namespace Menu.Mock
 {
     public enum MenuTypes
     {

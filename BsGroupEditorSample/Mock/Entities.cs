@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using BForms.Models;
 
-namespace BsGroupEditorSample.Mock
+namespace Menu.Mock
 {
     #region Context
     [Serializable]

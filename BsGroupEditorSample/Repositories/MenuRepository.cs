@@ -5,17 +5,17 @@ using System.Linq;
 using System.Web;
 using BForms.Grid;
 using BForms.Models;
-using BsGroupEditorSample.Mock;
-using BsGroupEditorSample.Models;
+using Menu.Mock;
+using Menu.Models;
 
-namespace BsGroupEditorSample.Repositories
+namespace Menu.Repositories
 {
     public class GroupEditorSettings : BsGridRepositorySettings<MenuItemSearchModel>
     {
         public MenuItemTypes TabId { get; set; }
     }
 
-    public class GroupEditorSampleRepository : BsBaseGridRepository<MenuItem, SampleGroupRowModel>
+    public class MenuRepository : BsBaseGridRepository<MenuItem, SampleGroupRowModel>
     {
 
         #region Properties and Constructor
@@ -30,7 +30,7 @@ namespace BsGroupEditorSample.Repositories
             }
         }
 
-        public GroupEditorSampleRepository(BFormsContext _db)
+        public MenuRepository(BFormsContext _db)
         {
             db = _db;
         }

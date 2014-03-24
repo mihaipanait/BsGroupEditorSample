@@ -5,10 +5,10 @@ using System.Linq;
 using System.Web;
 using BForms.Models;
 using BForms.Mvc;
-using BsGroupEditorSample.Mock;
-using BsGroupEditorSample.Resources;
+using Menu.Mock;
+using Menu.Resources;
 
-namespace BsGroupEditorSample.Models
+namespace Menu.Models
 {
     public class SampleGroupRowModel : BsEditorGroupItemModel<SampleRowFormModel>
     {

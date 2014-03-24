@@ -6,9 +6,9 @@ using System.Web.Mvc;
 using System.Web.Routing;
 using BForms.Mvc;
 using System.Web.Optimization;
-using BsGroupEditorSample.App_Start;
+using Menu.App_Start;
 
-namespace BsGroupEditorSample
+namespace Menu
 {
     public class MvcApplication : System.Web.HttpApplication
     {

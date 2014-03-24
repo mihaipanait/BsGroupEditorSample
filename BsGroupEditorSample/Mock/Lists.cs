@@ -5,7 +5,7 @@ using System.Web;
 using BForms.Models;
 using System.Collections.Generic;
 
-namespace BsGroupEditorSample.Mock
+namespace Menu.Mock
 {
     public static class Lists
     {

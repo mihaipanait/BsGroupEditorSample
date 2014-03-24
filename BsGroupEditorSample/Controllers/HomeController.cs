@@ -7,20 +7,20 @@ using BForms.Editor;
 using BForms.Grid;
 using BForms.Models;
 using BForms.Mvc;
-using BsGroupEditorSample.Mock;
-using BsGroupEditorSample.Models;
-using BsGroupEditorSample.Repositories;
-using BsGroupEditorSample.Resources;
+using Menu.Mock;
+using Menu.Models;
+using Menu.Repositories;
+using Menu.Resources;
 
-namespace BsGroupEditorSample.Controllers
+namespace Menu.Controllers
 {
     public class HomeController : BaseController
     {
-        private readonly GroupEditorSampleRepository repo;
+        private readonly MenuRepository repo;
 
         public HomeController()
         {
-            repo = new GroupEditorSampleRepository(Db);
+            repo = new MenuRepository(Db);
         }
 
         public ActionResult Index()

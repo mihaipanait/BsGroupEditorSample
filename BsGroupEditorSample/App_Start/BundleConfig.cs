@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Optimization;
 
-namespace BsGroupEditorSample.App_Start
+namespace Menu.App_Start
 {
     public class BundleConfig
     {

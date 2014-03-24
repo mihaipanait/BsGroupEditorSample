@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using BsGroupEditorSample.Mock;
+using Menu.Mock;
 using RequireJS;
 
-namespace BsGroupEditorSample.Controllers
+namespace Menu.Controllers
 {
     public class BaseController : RequireJS.RequireJsController
     {
