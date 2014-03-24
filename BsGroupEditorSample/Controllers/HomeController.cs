@@ -34,26 +34,26 @@ namespace Menu.Controllers
 
             var model = new GroupEditorModel()
             {
-                Tab1 = new BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, PageNewModel>
+                Tab1 = new BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, PageNewModel>
                 {
                     Grid = repo.ToBsGridViewModel(bsGridSettings),
                     Search = repo.GetSearchForm(),
                     New = repo.GetNewPageForm()
                 },
 
-                Group1 = new BsEditorGroupModel<SampleGroupRowModel>
+                Group1 = new BsEditorGroupModel<MenuGroupRowModel>
                 {
-                    Items = new List<SampleGroupRowModel>()
+                    Items = new List<MenuGroupRowModel>()
                 },
 
-                Group2 = new BsEditorGroupModel<SampleGroupRowModel>
+                Group2 = new BsEditorGroupModel<MenuGroupRowModel>
                 {
-                    Items = new List<SampleGroupRowModel>()
+                    Items = new List<MenuGroupRowModel>()
                 },
 
-                Group3 = new BsEditorGroupModel<SampleGroupRowModel>
+                Group3 = new BsEditorGroupModel<MenuGroupRowModel>
                 {
-                    Items = new List<SampleGroupRowModel>()
+                    Items = new List<MenuGroupRowModel>()
                 }
             };
 
@@ -132,11 +132,11 @@ namespace Menu.Controllers
                     var groupEditorModel = new GroupEditorModel
                     {
                         
-                        Tab1 = new BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, PageNewModel>
+                        Tab1 = new BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, PageNewModel>
                         {
-                            Grid = new BsGridModel<SampleGroupRowModel>
+                            Grid = new BsGridModel<MenuGroupRowModel>
                             {
-                                Items = new List<SampleGroupRowModel>
+                                Items = new List<MenuGroupRowModel>
                                 {
                                     rowModel
                                 }
@@ -185,7 +185,7 @@ namespace Menu.Controllers
 
                     var grid1 = repo.ToBsGridViewModel(settings, out count);
 
-                    model.Tab1 = new BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, PageNewModel>
+                    model.Tab1 = new BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, PageNewModel>
                     {
                         Grid = grid1,
                         Search = repo.GetSearchForm(),
@@ -197,7 +197,7 @@ namespace Menu.Controllers
 
                     var grid2 = repo.ToBsGridViewModel(settings, out count);
 
-                    model.Tab2 = new BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, CustomLinkNewModel>
+                    model.Tab2 = new BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, CustomLinkNewModel>
                     {
                         Grid = grid2,
                         Search = repo.GetSearchForm(),
@@ -209,7 +209,7 @@ namespace Menu.Controllers
 
                     var grid3 = repo.ToBsGridViewModel(settings, out count);
 
-                    model.Tab3 = new BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, CategoryNewModel>
+                    model.Tab3 = new BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, CategoryNewModel>
                     {
                         Grid = grid3,
                         Search = repo.GetSearchForm(),

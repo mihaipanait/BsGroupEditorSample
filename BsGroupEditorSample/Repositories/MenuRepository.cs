@@ -15,7 +15,7 @@ namespace Menu.Repositories
         public MenuItemTypes TabId { get; set; }
     }
 
-    public class MenuRepository : BsBaseGridRepository<MenuItem, SampleGroupRowModel>
+    public class MenuRepository : BsBaseGridRepository<MenuItem, MenuGroupRowModel>
     {
 
         #region Properties and Constructor
@@ -38,8 +38,8 @@ namespace Menu.Repositories
         #endregion
 
         #region Mappers
-        public Func<MenuItem, SampleGroupRowModel> MapMenuItem_SampleGroupRowModel = x =>
-            new SampleGroupRowModel
+        public Func<MenuItem, MenuGroupRowModel> MapMenuItem_SampleGroupRowModel = x =>
+            new MenuGroupRowModel
             {
                 Id = x.Id,
                 DisplayNameLocal = x.DisplayNameLocal,
@@ -63,7 +63,7 @@ namespace Menu.Repositories
             return orderedQuery;
         }
 
-        public override IEnumerable<SampleGroupRowModel> MapQuery(IQueryable<MenuItem> query)
+        public override IEnumerable<MenuGroupRowModel> MapQuery(IQueryable<MenuItem> query)
         {
             return query.Select(MapMenuItem_SampleGroupRowModel);
         }
@@ -141,7 +141,7 @@ namespace Menu.Repositories
             return new CategoryNewModel();
         }
 
-        public SampleGroupRowModel CreatePage(PageNewModel model)
+        public MenuGroupRowModel CreatePage(PageNewModel model)
         {
             var entity = new MenuItem();
             if(model != null)

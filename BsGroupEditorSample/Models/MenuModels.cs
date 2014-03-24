@@ -10,7 +10,7 @@ using Menu.Resources;
 
 namespace Menu.Models
 {
-    public class SampleGroupRowModel : BsEditorGroupItemModel<SampleRowFormModel>
+    public class MenuGroupRowModel : BsEditorGroupItemModel<MenuRowFormModel>
     {
         public int Id { get; set; }
         public string DisplayNameLocal { get; set; }
@@ -25,7 +25,7 @@ namespace Menu.Models
         }
     }
 
-    public class SampleRowFormModel
+    public class MenuRowFormModel
     {
         [Display(Name = "DisplayName", ResourceType = typeof(Resource))]
         [Required]
@@ -40,22 +40,22 @@ namespace Menu.Models
     public class GroupEditorModel
     {
         [BsEditorTab(Name = "Pages", Id = MenuItemTypes.Page, Selected = true)]
-        public BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, PageNewModel> Tab1 { get; set; }
+        public BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, PageNewModel> Tab1 { get; set; }
 
         [BsEditorTab(Name = "Custom Links", Id = MenuItemTypes.CustomLink, Selected = false)]
-        public BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, CustomLinkNewModel> Tab2 { get; set; }
+        public BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, CustomLinkNewModel> Tab2 { get; set; }
 
         [BsEditorTab(Name = "Categories", Id = MenuItemTypes.Category, Selected = false)]
-        public BsEditorTabModel<SampleGroupRowModel, MenuItemSearchModel, CategoryNewModel> Tab3 { get; set; }
+        public BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, CategoryNewModel> Tab3 { get; set; }
 
         [BsEditorGroup(Id = MenuTypes.PublicMenu)]
-        public BsEditorGroupModel<SampleGroupRowModel> Group1 { get; set; }
+        public BsEditorGroupModel<MenuGroupRowModel> Group1 { get; set; }
 
         [BsEditorGroup(Id = MenuTypes.UsersMenu)]
-        public BsEditorGroupModel<SampleGroupRowModel> Group2 { get; set; }
+        public BsEditorGroupModel<MenuGroupRowModel> Group2 { get; set; }
 
         [BsEditorGroup(Id = MenuTypes.AdminMenu)]
-        public BsEditorGroupModel<SampleGroupRowModel> Group3 { get; set; }
+        public BsEditorGroupModel<MenuGroupRowModel> Group3 { get; set; }
     }
 
     public class GroupEditorViewModel
