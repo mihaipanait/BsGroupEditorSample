@@ -10,6 +10,19 @@ using Menu.Resources;
 
 namespace Menu.Models
 {
+    public class MenuRowFormModel
+    {
+        [Display(Name = "DisplayNameInternational", ResourceType = typeof(Resource))]
+        [Required]
+        [BsControl(BsControlType.TextBox)]
+        public string DisplayNameInternational { get; set; }
+
+        [Display(Name = "DisplayNameLocal", ResourceType = typeof(Resource))]
+        [Required]
+        [BsControl(BsControlType.TextBox)]
+        public string DisplayNameLocal { get; set; }
+    }
+
     public class MenuGroupRowModel : BsEditorGroupItemModel<MenuRowFormModel>
     {
         public int Id { get; set; }
@@ -23,44 +36,6 @@ namespace Menu.Models
         {
             return this.Id;
         }
-    }
-
-    public class MenuRowFormModel
-    {
-        [Display(Name = "DisplayName", ResourceType = typeof(Resource))]
-        [Required]
-        [BsControl(BsControlType.TextBox)]
-        public string Name { get; set; }
-
-        [Display(Name = "Link", Prompt = "PromptLink", ResourceType = typeof(Resource))]
-        [BsControl(BsControlType.TextBox)]
-        public string Link { get; set; }
-    }
-
-    public class GroupEditorModel
-    {
-        [BsEditorTab(Name = "Pages", Id = MenuItemTypes.Page, Selected = true)]
-        public BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, PageNewModel> Tab1 { get; set; }
-
-        [BsEditorTab(Name = "Custom Links", Id = MenuItemTypes.CustomLink, Selected = false)]
-        public BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, CustomLinkNewModel> Tab2 { get; set; }
-
-        [BsEditorTab(Name = "Categories", Id = MenuItemTypes.Category, Selected = false)]
-        public BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, CategoryNewModel> Tab3 { get; set; }
-
-        [BsEditorGroup(Id = MenuTypes.PublicMenu)]
-        public BsEditorGroupModel<MenuGroupRowModel> Group1 { get; set; }
-
-        [BsEditorGroup(Id = MenuTypes.UsersMenu)]
-        public BsEditorGroupModel<MenuGroupRowModel> Group2 { get; set; }
-
-        [BsEditorGroup(Id = MenuTypes.AdminMenu)]
-        public BsEditorGroupModel<MenuGroupRowModel> Group3 { get; set; }
-    }
-
-    public class GroupEditorViewModel
-    {
-        public GroupEditorModel Editor { get; set; }
     }
 
     public class MenuItemSearchModel
@@ -125,7 +100,8 @@ namespace Menu.Models
 
     public sealed class PageNewModel : MenuItemNewModel
     {
-        public PageNewModel() : base()
+        public PageNewModel()
+            : base()
         {
             MenuItemType = MenuItemTypes.Page;
         }
@@ -135,7 +111,8 @@ namespace Menu.Models
 
     public sealed class CategoryNewModel : MenuItemNewModel
     {
-        public CategoryNewModel() : base()
+        public CategoryNewModel()
+            : base()
         {
             MenuItemType = MenuItemTypes.Category;
         }
@@ -145,11 +122,38 @@ namespace Menu.Models
 
     public sealed class CustomLinkNewModel : MenuItemNewModel
     {
-        public CustomLinkNewModel() : base()
+        public CustomLinkNewModel()
+            : base()
         {
             MenuItemType = MenuItemTypes.CustomLink;
         }
 
         public override MenuItemTypes MenuItemType { get; set; }
+    }
+
+    public class GroupEditorModel
+    {
+        [BsEditorTab(Name = "Pages", Id = MenuItemTypes.Page, Selected = true)]
+        public BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, PageNewModel> Tab1 { get; set; }
+
+        [BsEditorTab(Name = "Custom Links", Id = MenuItemTypes.CustomLink, Selected = false)]
+        public BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, CustomLinkNewModel> Tab2 { get; set; }
+
+        [BsEditorTab(Name = "Categories", Id = MenuItemTypes.Category, Selected = false)]
+        public BsEditorTabModel<MenuGroupRowModel, MenuItemSearchModel, CategoryNewModel> Tab3 { get; set; }
+
+        [BsEditorGroup(Id = MenuTypes.PublicMenu)]
+        public BsEditorGroupModel<MenuGroupRowModel> Group1 { get; set; }
+
+        [BsEditorGroup(Id = MenuTypes.UsersMenu)]
+        public BsEditorGroupModel<MenuGroupRowModel> Group2 { get; set; }
+
+        [BsEditorGroup(Id = MenuTypes.AdminMenu)]
+        public BsEditorGroupModel<MenuGroupRowModel> Group3 { get; set; }
+    }
+
+    public class GroupEditorViewModel
+    {
+        public GroupEditorModel Editor { get; set; }
     }
 }
